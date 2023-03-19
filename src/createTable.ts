@@ -1,25 +1,25 @@
 import Transacoes from "./Interfaces/TransacaoAPI"
 
-export default function createTable(dados: Transacoes) {
+export default function createTable(dados: any) {
   const table = document.querySelector("table")
 
   const tr = document.createElement("tr")
   tr.classList.add("contentTables")
 
   const tdName = document.createElement("td")
-  tdName.textContent = dados.Nome
+  tdName.textContent = dados.nome
 
   const tdEmail = document.createElement("td")
-  tdEmail.textContent = dados.Email
+  tdEmail.textContent = dados.email
 
   const tdCompra = document.createElement("td")
-  tdCompra.textContent = dados["Valor (R$)"]
+  tdCompra.textContent = dados.moeda
 
   const tdPagamento = document.createElement("td")
-  tdPagamento.textContent = dados["Forma de Pagamento"]
+  tdPagamento.textContent = dados.pagamento
 
   const tdStatus = document.createElement("td")
-  tdStatus.textContent = dados.Status
+  tdStatus.textContent = dados.status
 
   tr.appendChild(tdName)
   tr.appendChild(tdEmail)

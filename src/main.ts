@@ -2,7 +2,6 @@ import getDataApi from "./fetchData"
 import TransacaoAPI from "./Interfaces/TransacaoAPI"
 import createTable from "./createTable"
 import normalizarTransacao from "./utils/normalizarTransacao"
-// import checkInterface from "./utils/checkInterface"
 
 async function handleData() {
   const data = await getDataApi<TransacaoAPI[]>(

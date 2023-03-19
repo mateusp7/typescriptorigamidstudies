@@ -1,6 +1,6 @@
 import Transacao from "../Interfaces/Transacao"
 import TransacaoAPI from "../Interfaces/TransacaoAPI"
-import transformModaToNumber from "./moedaToNumber"
+import transformMoedaToNumber from "./moedaToNumber"
 import stringToDate from "./stringToDate"
 
 export default function normalizarTransacao(
@@ -13,7 +13,7 @@ export default function normalizarTransacao(
     nome: transacao.Nome,
     status: transacao.Status,
     moeda: transacao["Valor (R$)"],
-    valor: transformModaToNumber(transacao["Valor (R$)"]),
+    valor: transformMoedaToNumber(transacao["Valor (R$)"]),
     pagamento: transacao["Forma de Pagamento"],
     novo: Boolean(transacao["Cliente Novo"]),
   }

@@ -26,22 +26,21 @@ li {
 table {
   border-collapse: collapse;
   width: 80%;
+  border-spacing: 0;
+  text-align: left;
 }
 
-#titlesTable th {
-  text-align: center;
-  font-size: 14px;
-  padding: 8px 0;
+table td,
+table th {
+  padding: 0.5rem 1rem;
 }
 
-.contentTables td {
+tbody td {
   font-size: 12px;
 }
 
 td {
   font-size: 16px;
-  padding: 8px;
-  text-align: center;
 }
 
 tr:nth-child(even) {
@@ -52,4 +51,18 @@ tr:nth-child(even) {
 td,
 th {
   border: 1px solid #ddd;
+}
+
+h2,
+p {
+  margin-left: 1rem;
+}
+
+h2 {
+  border-top: 6px solid ghostwhite;
+  padding-top: 1rem;
+}
+
+div {
+  border-top: 3px solid ghostwhite;
 }

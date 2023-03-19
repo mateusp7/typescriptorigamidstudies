@@ -1,8 +1,11 @@
+import Transacao from "../Interfaces/Transacao"
 import TransacaoAPI from "../Interfaces/TransacaoAPI"
 import transformModaToNumber from "./moedaToNumber"
 import stringToDate from "./stringToDate"
 
-export default function normalizarTransacao(transacao: TransacaoAPI) {
+export default function normalizarTransacao(
+  transacao: TransacaoAPI
+): Transacao {
   return {
     data: stringToDate(transacao.Data),
     email: transacao.Email,

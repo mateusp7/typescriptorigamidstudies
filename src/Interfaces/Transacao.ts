@@ -2,7 +2,7 @@ import TransacaoPagamento from "../types/TransacaoPagamento"
 import TransacaoStatus from "../types/TransacaoStatus"
 
 export default interface Transacao {
-  data: string
+  data: Date
   email: string
   id: number
   nome: string

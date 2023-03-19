@@ -10,9 +10,7 @@ async function handleData() {
   )
   if (!data) return
   const transacoesFormatada = data.map(normalizarTransacao)
-  transacoesFormatada.forEach((item) => {
-    createTable(item)
-  })
+  createTable(transacoesFormatada)
 }
 
 handleData()

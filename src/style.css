@@ -63,6 +63,11 @@ h2 {
   padding-top: 1rem;
 }
 
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 div {
   border-top: 3px solid ghostwhite;
 }

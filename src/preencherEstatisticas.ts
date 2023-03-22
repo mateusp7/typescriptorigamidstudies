@@ -4,13 +4,19 @@ import preencherLista from "./preencherLIsta"
 
 export default function preencherEstatisticas(transacoes: Transacao[]) {
   const data = new Estatisticas(transacoes)
-  const totalElements = document.querySelector<HTMLElement>("#total span")
-  if (!totalElements) return
+  const totalElement = document.querySelector<HTMLElement>("#total span")
 
-  totalElements.innerText = data.total.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  })
+  if (totalElement) {
+    totalElement.innerText = data.total.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    })
+  }
+
+  const diaElement = document.querySelector<HTMLElement>("#dia span")
+  if (data.melhorDia) {
+    if (diaElement) diaElement.innerText = data.melhorDia[0]
+  }
 
   preencherLista(data.pagamento, "pagamento")
   preencherLista(data.status, "status")
